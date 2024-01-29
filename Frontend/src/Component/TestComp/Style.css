@@ -1,0 +1,179 @@
+        html,body {
+            font-size: 1.1111111111111112vw;
+          }
+
+          @media only screen and (max-width: 767px) {
+
+            html,
+            body {
+              font-size: 16px;
+            }
+
+            .hero__paragraph,
+            .healthier-bullet-point {
+              font-size: clamp(18px, 5vw, 28px) !important;
+            }
+
+            .contact-field {
+              font-size: max(16px, 0.9em) !important;
+            }
+
+            .project__title {
+              font-size: clamp(16px, 10vw, 32px) !important;
+            }
+
+            .meta-copy {
+              font-size: clamp(18px, 4vw, 20px) !important;
+            }
+
+            .meta-copy.is--meta {
+              font-size: max(14px, 1.1rem) !important;
+            }
+
+            .filter-button {
+              font-size: clamp(10px, 0.8em, 14px) !important;
+            }
+
+            .project-grid__item-text {
+              font-size: clamp(10px, 0.76em, 14px) !important;
+            }
+          }
+
+          .project-meta-title,
+          .navigation-bar,
+          .project-grid__item-text,
+          .footer__caption,
+          .preloader-bar,
+          .project-credit-title {
+            font-size: clamp(10px, 0.8em, 14px);
+          }
+
+          .arrow-button {
+            font-size: clamp(10px, 0.8em, 20px);
+          }
+
+          .project-grid__image-container {
+            margin-bottom: max(0.9em, 12px);
+          }
+
+          .project-grid__item-split {
+            margin-bottom: max(0.6em, 8px);
+          }
+
+          .image-3 {
+            margin-top: clamp(-8em, -10em, 4044px);
+          }
+
+          .project-grid__image-container {
+            aspect-ratio: 16 / 9;
+          }
+
+          span.word,
+          span.letter,
+          span.split {
+            display: inline-block;
+          }
+
+          .navigation-bar {
+            /*mix-blend-mode: difference;*/
+          }
+
+          .services__text {
+            transform-origin: top left;
+          }
+
+          .lottie-animation-2
+          {
+            aspect-ratio: 1 / 1;
+          }
+
+          .psuedo-project-state,
+          .transition-wrapper {
+            pointer-events: none;
+          }
+
+          .section-ethos__lottie,
+          .hero-animation-container {
+            aspect-ratio: 289 / 205;
+          }
+
+          #hero-lightpass,
+          #moto-helmet {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+
+          .section-ethos__lottie.is--about {
+            aspect-ratio: 1 / 1;
+          }
+
+          .hero-video__embed {
+            visibility: hidden;
+          }
+
+          .hero-heading.is--full-width {
+            white-space: nowrap;
+          }
+
+          .project-image {
+            aspect-ratio: 16 / 9;
+
+          }
+
+          .page-container,
+          .transition-wrapper {
+            padding-top: max(50px, 6vh);
+          }
+
+
+          .hero__paragraph {
+            font-size: max(18px, 1.7em)
+          }
+
+          .contact-field,
+          .contact-submit {
+            font-size: max(11px, 0.9em);
+            padding: max(12px, 0.325rem) max(8px, 0.1rem);
+          }
+
+          .contact-field.is--textarea {
+            padding: max(8px, 0.2rem) max(8px, 0.1rem);
+          }
+
+          .healthier-bullet-point {
+            font-size: max(18px, 1.8em);
+          }
+
+          .meta-copy {
+            font-size: max(16px, 1.5em);
+          }
+
+          .meta-copy.is--meta {
+            font-size: max(14px, 1.1rem);
+          }
+
+          .project__title {
+            font-size: max(30px, 3em);
+          }
+
+          .section__hero {
+            height: 100svh !important;
+          }
+
+          .preloader__logo-wrapper {
+            height: 100dvh !important;
+          }
+
+          .is--helmet {
+            aspect-ratio: 400 / 369;
+          }
+
+          .moto-bike-wrapper {
+            overflow-y: visible;
+            overflow-x: clip;
+          }

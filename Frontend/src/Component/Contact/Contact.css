@@ -1,0 +1,53 @@
+.word {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .word.visible {
+    opacity: 1;
+  }
+  
+  .letter {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--letter-index)); /* Adjust delay as needed */
+  }
+  
+  .letter.visible {
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .c-form-text {
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .c-form-text.animated {
+    animation: fadeIn 1s forwards;
+  }
+  

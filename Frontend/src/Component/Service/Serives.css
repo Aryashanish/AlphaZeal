@@ -1,0 +1,53 @@
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(50%);
+    }
+  }
+  
+  .animate-left {
+    animation: slideInLeft 1.5s ease-in-out forwards;
+  }
+  
+  .animate-right {
+    animation: slideInRight 1.5s ease-in-out forwards;
+  }
+  
+  @media (max-width:770px){
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    
+    .animate-left {
+      animation: slideInLeft 1.5s ease-in-out forwards;
+    }
+    
+    .animate-right {
+      animation: slideInRight 1.5s ease-in-out forwards;
+    }
+  }

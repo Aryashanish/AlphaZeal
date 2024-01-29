@@ -1,0 +1,38 @@
+/* Add the following styles to your stylesheets or components */
+.video-container {
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set to 100% of the viewport height */
+    background-color: black;
+}
+.content{
+    background-color: rgb(223, 223, 223);
+}
+.service{
+    background-color: rgb(223, 223, 223);
+}
+.featured-video-container{
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Sticky HeaderVideo */
+.sticky-header-video {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Set the desired background color */
+    z-index: 100; /* Set a higher z-index to ensure it stays on top of other content */
+  }
+  
+  .content-wrapper {
+    flex: 1; /* Grow to fill available space */
+    overflow-y: auto; /* Add vertical scrollbar if the content overflows */
+  }
+  

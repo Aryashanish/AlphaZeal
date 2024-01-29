@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Glacial Indifference'
+}
+
+
+@media (max-width:1000px) {
+  .content-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .content-text{
+    font-size: 2rem;
+  }
+  .wwithus-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wwithus-text{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:770px){
+  .footer-section{
+    display: flex;
+    flex-direction: column;
+  }
+  .a-text-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .a-text{
+    width: 100%;
+    text-align: center;
+  }
+  .a-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .f-link{
+    width: 50%;
+  }
+  .f-text{
+    margin: 20px 0px;
+  }
+
+}
+
+@media (max-width: 705px){
+  .header-logo{
+    margin: 0px;
+  }
+  .header-link{
+    padding: 0px 3px;
+  }
+  .c-form-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .c-text{
+    width: 100%;
+  }
+  .c-form{
+    width: 100%;
+  }
+}
+
+@media (max-width: 665px){
+  .f-main-text{
+    font-size: 4rem;
+  }
+  .s-main-text{
+    font-size: 5rem;
+  }
+  .w-main-text{
+    font-size: 5rem;
+  }
+  .c-main-text{
+    font-size: 5rem;
+  }
+  .a-main-text{
+    font-size: 4rem;
+  }
+  .w-main-text{
+    font-size: 4rem;
+  }
+  .a-text-link{
+    font-size: 1rem;
+    padding: 4px;
+  }
+}
+@media (max-width: 413px){
+  .f-main-text{
+    font-size: 3rem;
+  }
+  .s-main-text{
+    font-size: 4rem;
+  }
+  .s-text{
+    font-size: 2rem;
+  }
+  .w-main-text{
+    font-size: 3rem;
+  }
+  .a-text{
+    font-size: 3rem;
+  }
+  .a-main-text{
+    font-size: 2rem;
+  }
+  .c-main-text{
+    font-size: 3rem;
+  }
+  .w-main-text{
+    font-size: 3rem;
+  }
+  .h-social{
+    display: none;
+  }
+  .h-logo-link{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .a-desc-head-text{
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 611px){
+  .h-time{
+    display: none;
+  }
+}
+
+@media (max-width: 766px){
+  .featured-video-container{
+    width: 100%;
+  }
+}
+
