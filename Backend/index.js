@@ -9,7 +9,7 @@ const cors=require("cors");
 //Middleware
 app.use(cors(
     {
-        origin: ["https://alpha-zeal.vercel.app/"],
+        origin: ["https://alpha-zeal.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
