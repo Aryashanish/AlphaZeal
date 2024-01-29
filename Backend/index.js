@@ -7,7 +7,13 @@ const URL="mongodb+srv://aryashanish:9525633767@cluster0.j7tl5vl.mongodb.net/alp
 const cors=require("cors");
 
 //Middleware
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
