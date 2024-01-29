@@ -4,6 +4,7 @@ import "./Style.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext';
+import { base_url } from '../../Api/api';
 
 export const Form = () => {
   const auth = useContext(AuthContext);
@@ -22,7 +23,7 @@ export const Form = () => {
             "pass": pass,
         }
 
-        axios.post("http://localhost:8000/admin", data)
+        axios.post(`${base_url}/admin`, data)
             .then((result) => {
                 console.log(result);
                 auth.setAuthenticated(true);

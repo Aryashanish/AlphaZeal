@@ -6,6 +6,7 @@ import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 import axios from 'axios';
 import VideoYouTube from '../VideoCard/VideoYoutube';
+import { base_url } from '../../Api/api';
 
 export const Work = () => {
     const [ref, inView] = useInView({
@@ -16,7 +17,7 @@ export const Work = () => {
     const [works, setWorks] = useState(null);
 
     async function hangleData() {
-        axios.get("http://localhost:8000/getWork")
+        axios.get(`${base_url}/getWork`)
             .then((result) => {
                 console.log(result.data.msg);
                 setWorks(result.data.msg);

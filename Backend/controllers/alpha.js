@@ -68,7 +68,7 @@ async function handleEnquiry(req,res)
 async function handleAdmin(req,res)
 {
     const body=req.body;
-    console.log(body);
+    // console.log(body);
     if(!body ||
         !body.email ||
         !body.pass)
@@ -80,7 +80,7 @@ async function handleAdmin(req,res)
 
     const email=body.email;
     const password=body.pass;
-    if(email=="admin@alphazeal.com" && password=="987654321a@A")
+    if(email=="admin@alphazeal.com" && password=="alphazeal@123")
         return res.status(201).json({ "msg": "Admin Portel Access Permited" });
     
     return res.status(401).json({"msg":"Something is wrong"});

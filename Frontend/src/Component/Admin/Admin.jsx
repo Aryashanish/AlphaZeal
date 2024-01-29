@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AuthContext } from "../../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { base_url } from "../../Api/api";
 
 export const Admin = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const Admin = () => {
 
   async function hangleData() {
     axios
-      .get("http://localhost:8000/getData")
+      .get(`${base_url}/getData`)
       .then((result) => {
         console.log(result.data.msg);
         setQuery(result.data.msg);
@@ -28,7 +29,7 @@ export const Admin = () => {
     }
     
     async function getAllWork() {
-        axios.get("http://localhost:8000/getWork")
+        axios.get(`${base_url}/getWork`)
             .then((result) => {
                 console.log(result.data.msg);
                 setWork(result.data.msg);
@@ -48,7 +49,7 @@ export const Admin = () => {
     };
 
     axios
-      .post("http://localhost:8000/work", data)
+      .post(`${base_url}/work`, data)
       .then((result) => {
         console.log(result);
         setFlag(true);
@@ -62,7 +63,7 @@ export const Admin = () => {
   async function handleQuery(id) {
     const data = { id: id };
     axios
-      .post("http://localhost:8000/resolveQuery", data)
+      .post(`${base_url}/resolveQuery`, data)
       .then((result) => {
         console.log(result);
         hangleData();
@@ -75,7 +76,7 @@ export const Admin = () => {
     async function handleWork(id) {
         const data = { id: id };
         axios
-        .post("http://localhost:8000/removeWork", data)
+        .post(`${base_url}/removeWork`, data)
         .then((result) => {
             console.log(result);
             getAllWork();  

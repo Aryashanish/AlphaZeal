@@ -5,6 +5,7 @@ import { Header } from "../Header/Header";
 import { useInView } from "react-intersection-observer";
 import "./Contact.css"; // Import the CSS file for styling
 import axios from "axios";
+import { base_url } from "../../Api/api";
 
 export const Contact = () => {
   const [ref, inView] = useInView({
@@ -30,7 +31,7 @@ export const Contact = () => {
       inquiry: inquiry,
     };
 
-    axios.post("http://localhost:8000/contact", data)
+    axios.post(`${base_url}/contact`, data )
       .then((result) => {
         console.log(" enquiry submit Sucessful" , result);
         setFlag(true);
