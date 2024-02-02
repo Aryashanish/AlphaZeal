@@ -23,7 +23,7 @@ export const Header = () => {
           <div className="header-logo mx-4">
             <Link to="/">
               <img src="/Image/AZ_Logo.png" alt="Logo" 
-                className="w-10 h-6 bg-gray-900 rounded-lg"
+                className="w-10 h-6"
               />
             </Link>
           </div>

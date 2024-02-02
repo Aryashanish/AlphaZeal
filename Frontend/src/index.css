@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *{
-  font-family: 'Glacial Indifference'
+  font-family: Times, "Times New Roman", Georgia, serif;
 }
 
 
