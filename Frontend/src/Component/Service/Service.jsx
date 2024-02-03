@@ -23,7 +23,7 @@ const RevealText = ({ index, text, startAnimation }) => {
 
     if (inView && !animationTriggered && startAnimation) {
       if (placeholder.length < text.length) {
-        let addChar = setInterval(tick, 100);
+        let addChar = setInterval(tick, 30);
         return () => {
           clearInterval(addChar);
           isMounted = false;
@@ -37,7 +37,7 @@ const RevealText = ({ index, text, startAnimation }) => {
   return (
     <div
       ref={ref}
-      className={`s-text ${index % 2 === 0 ? 'text-left' : 'w-1/2 ml-auto flex justify-start'} text-4xl font-bold my-4`}
+      className={`s-text ${index % 2 === 0 ? 's-text-anim text-left' : 's-text-anim w-1/2 ml-auto flex justify-start'} text-4xl font-bold my-4`}
     >
       {placeholder}
     </div>
@@ -68,7 +68,7 @@ export const Service = () => {
     if (inView) {
       setTimeout(() => {
         setCurrentSentenceIndex((prevIndex) => prevIndex + 1);
-      }, 2000); // 2 seconds delay between sentences
+      }, 500); // 2 seconds delay between sentences
     }
   }, [inView, currentSentenceIndex, services.length]);
 

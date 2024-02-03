@@ -32,15 +32,20 @@ const Mainpage = () => (
 );
 
 export const Home = () => {
-  const [showLandingPage, setShowLandingPage] = useState(true);
+  const [showMainPage, setShowMainPage] = useState(false);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setShowLandingPage(false);
-    }, 2000);
+      setShowMainPage(true);
+    }, 1000); // Adjust the delay as needed
 
     return () => clearTimeout(timeoutId);
   }, []);
 
-  return showLandingPage ? <LandingPage /> : <Mainpage />;
+  return (
+    <div className={`transition-container ${showMainPage ? 'show-main' : 'show-landing'}`}>
+      <LandingPage />
+      <Mainpage />
+    </div>
+  );
 };

@@ -27,25 +27,25 @@ export const Footer = () => {
           <div className="flex flex-col mx-5">
             <Link
               to={"/"}
-              className="text-5xl font-bold text-transform: uppercase"
+              className="text-5xl font-bold text-transform: uppercase hover:text-gray-400"
             >
               Home
             </Link>
             <Link
               to={"/"}
-              className="text-5xl font-bold text-transform: uppercase my-1"
+              className="text-5xl font-bold text-transform: uppercase my-1 hover:text-gray-400"
             >
               About
             </Link>
             <Link
               to={"/"}
-              className="text-5xl font-bold text-transform: uppercase"
+              className="text-5xl font-bold text-transform: uppercase hover:text-gray-400"
             >
               Work
             </Link>
             <Link
               to={"/"}
-              className="text-5xl font-bold text-transform: uppercase my-1"
+              className="text-5xl font-bold text-transform: uppercase my-1 hover:text-gray-400"
             >
               Contact
             </Link>
