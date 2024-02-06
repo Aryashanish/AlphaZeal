@@ -30,7 +30,7 @@ export const About = () => {
         </div>
         <div className={`a-text-img flex justify-evenly mt-6 ${showText ? 'animated' : ''}`}>
             <div className='a-text p-2 w-1/2'>
-                <p className='text-2xl my-2'>Unleash raw creativity! fortifying brands with a pro touch.
+                <p className='text-2xl my-6'>Unleash raw creativity! fortifying brands with a pro touch.
 Forget boring ads, we’re the creative rebels who turn brands into blockbusters. 
                       <br></br>
                       <br></br>
@@ -43,13 +43,13 @@ We craft unstoppable stories for organic growth and emphasize engagement fueled 
 
                   </p>
                 <Link to={"/about"}
-                    className="a-text-link border-solid border-2 border-white rounded-xl px-2"
+                    className="button-custom "
                 >
                     Read Me &#8594;
                 </Link>
                 <Link
                     to={"/work"}
-                    className="a-text-link mx-1 border-solid border-2 border-white rounded-xl px-2"  
+                    className="button-custom"  
                     >
                     View Our Work &#8594;
                 </Link>      
@@ -58,7 +58,7 @@ We craft unstoppable stories for organic growth and emphasize engagement fueled 
                 <img src='https://imgs.search.brave.com/8m-WZl-2k26iMPCLYANuULptZIkmHa-ev0O5B2Ya0Bs/rs:fit:500:0:0/g:ce/aHR0cDovL2ltYWdl/cy5jbGlwYXJ0cGFu/ZGEuY29tL2Jpa2Ut/Y2xpcGFydC1ibGFj/ay1hbmQtd2hpdGUt/YmxhY2std2hpdGUt/YmljeWNsZS5wbmc'></img>      
             </div>  
         </div>
-        <div className='mt-2'>
+        <div className='mt-32'>
             <div className=' my-2'>
                 <h1 className='a-desc-head-text text-6xl font-bold text-trasform: uppercase'>Daring creativity, real heart, and brands people love. That's Alpha Zeal." 
 </h1>
@@ -74,6 +74,7 @@ We craft unstoppable stories for organic growth and emphasize engagement fueled 
                 </div>      
                 <div className='text-xl font-semibold'>
                     <p><span className=' text-gray-400'>03</span> Custom stories for your brand that truly connect on a personal level.</p>
+                    <p><span className=' text-gray-400'>06</span> Tailored engagement strategies that resonate and build lasting relationships.</p>
                 </div>  
             </div>
         </div> 

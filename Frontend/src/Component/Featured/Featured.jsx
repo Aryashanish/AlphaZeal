@@ -1,8 +1,59 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useState , useEffect} from 'react';
 import { useInView } from 'react-intersection-observer';
 import { VideoCard } from '../VideoCard/VideoCard';
 import './Featured.css';
+
+
+
+const HeadingText = ({ text, startAnimation }) => {
+  const [placeholder, setPlaceholder] = useState('');
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    let isMounted = true;
+
+    function tick() {
+      if (isMounted) {
+        setPlaceholder((prev) => prev + text[placeholder.length]);
+      }
+    }
+
+    if (inView && !animationTriggered && startAnimation) {
+      if (placeholder.length < text.length) {
+        let addChar = setInterval(tick, 100);
+        return () => {
+          clearInterval(addChar);
+          isMounted = false;
+        };
+      }
+
+      setAnimationTriggered(true);
+    }
+  }, [inView, animationTriggered, placeholder, startAnimation, text]);
+
+  return (
+    <h1
+      ref={ref}
+      className="f-main-text text-center text-9xl font-bold text-white"
+    >
+      {placeholder}
+      
+    </h1>
+  );
+};
+
+
+
+
+
+
+
 
 export const Featured = () => {
   const [ref, inView] = useInView({
@@ -10,10 +61,32 @@ export const Featured = () => {
     threshold: 0.5,
   });
 
+  const heading = [
+    'FEATURED WORK'
+    
+  ];
+
+  const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
+
+  useEffect(() => {
+    if (inView) {
+      setTimeout(() => {
+        setCurrentSentenceIndex((prevIndex) => prevIndex + 1);
+      }, 500); // 2 seconds delay between sentences
+    }
+  }, [inView, currentSentenceIndex, heading.length]);
+
   return (
     <div className="featured-container">
       <div className="p-4 featured-section">
-        <p className={`f-main-text text-center text-9xl font-bold text-white ${inView ? 'animate-slideInLeft' : ''}`} ref={ref}>FEATURED WORK</p>
+        
+        {heading.map((service, index) => (
+       <div>
+         <HeadingText key={index} index={index} text={service} startAnimation={index <= currentSentenceIndex} />
+        
+       </div>
+
+      ))}
       </div>
         <div className={`flex justify-between p-2`}>
           <VideoCard

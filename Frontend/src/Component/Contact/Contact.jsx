@@ -93,7 +93,7 @@ export const Contact = () => {
           <h1 className="text-2xl text-center">
             {flag ? 'Your Data is Submited , Contact Soon' : ''}
             {err ? 'Something Went Wrong , Try Again' : ''}
-            {flag || err ? '' : 'Fill the Details'}
+            {flag || err ? '' : '_____________________________'}
           </h1>
           <form onSubmit={handleInquiry} className="my-4">
             <input
@@ -117,12 +117,12 @@ export const Contact = () => {
               placeholder="INQUIRY"
               onChange={(e) => setinquiry(e.target.value)}
               name="inquiry"
-              className="my-6 rounded-lg p-1 w-full bg-black border-x-2 border-y-2"
+              className="my-6 rounded-lg  py-8 text-left w-full bg-black border-x-2 border-y-2"
             />
             <br />
             <button
               type="submit"
-              className="bg-white w-full rounded-lg p-1 my-6 text-black text-2xl font-bold hover:bg-slate-200"
+              className="bg-white w-full rounded-lg p-1 my-6 text-black text-2xl hover:bg-slate-200"
             >
               Submit
             </button>

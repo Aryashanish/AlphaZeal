@@ -1,4 +1,5 @@
 // eslint-disable-next-line no-unused-vars
+
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
@@ -6,19 +7,20 @@ import "./Style.css";
 
 export const WorkWithUs = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.5,
   });
   return (
     <div className="bg-black text-white p-4">
-      <p
+      <h1
         ref={ref}
         className={`w-main-text ${
           inView ? "animate-featured" : ""
         } text-center text-9xl font-bold`}
       >
         WORK WITH US
-      </p>
+      </h1>
+      
       <div className="wwithus-box flex justify-between p-3">
         <div className="my-4 flex place-items-center">
           <video autoPlay loop muted controls={false} className="w-full h-full">
@@ -42,15 +44,15 @@ export const WorkWithUs = () => {
           <div className="my-3">
             <Link
               to={"/about"}
-              className="mx-1 border-solid border-2 border-white rounded-xl px-2"
+              className="button-custom-arrow"
             >
-              Read More &#8594;
+              Read More
             </Link>
             <Link
               to={"/work"}
-              className="mx-1 border-solid border-2 border-white rounded-xl px-2"
+              className="button-custom-arrow"
             >
-              Contact Our Team &#8594;
+              Contact Our Team 
             </Link>
           </div>
         </div>
@@ -58,3 +60,5 @@ export const WorkWithUs = () => {
     </div>
   );
 };
+
+

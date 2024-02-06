@@ -2,8 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --cream:    #fcfaf3;
+  --black:    #010101;
+  --cream_v2: #7E7E7A; 
+  --black_v2: #EEEEED; 
+}
+
 *{
-  font-family: Times, "Times New Roman", Georgia, serif;
+  font-family: 'RighteousRegular';
+  src: url("./src/glacial-indifference/Righteous-Regular.ttf");
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  /* Set a specific height or use padding-top to create an aspect ratio */
+  height: 100vh; /* Example height - this can be adjusted to fit your design */
+  overflow: hidden; /* This will hide any overflow caused by object-fit */
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover; /* This will cover the area, cropping the video as needed */
+}
+
+@font-face {
+  font-family: 'RighteousRegular';
+  /* src: url("./src/glacial-indifference/Righteous-Regular.ttf"); */
+  src: url("/glacial-indifference/Righteous-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'GlacialIndifference';
+  src: url("/glacial-indifference/GlacialIndifference-Regular.otf");
+}
+
+
+/* PRIMARY BUTTON */
+.button-custom, .button-custom-dashed, .button-custom-arrow{
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 5px 8px;
+  line-height: 1;
+  text-decoration: none;
+  transition: color .2s, background-color .2s cubic-bezier(.165, .84, .44, 1);
+}
+
+.button-custom-dashed{
+  color: rgba(255, 255, 255, .5);
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, .5)
+}
+
+.button-custom-arrow{
+  position: relative; /* This is necessary to position the pseudo-element relative to the button */
+  padding-right: 30px; /* Add padding to make room for the arrow */
+}
+
+.button-custom-arrow::after {
+  content: '→'; /* This is the arrow */
+  position: absolute;
+  right: 10px; /* Distance from the right edge of the button */
+  top: 50%;
+  transform: translateY(-50%); /* This centers the arrow vertically */
+}
+
+.button-custom, .button-custom-arrow:hover {
+  background-color: var(--cream); 
+  color: var(--black); 
+}
+
+.button-custom-dashed:hover {
+  background-color: var(--cream_v2); 
+  color: var(--black_v2); 
+}
+
+
+.button-custom-footer{
+  color: var(--cream);
+  text-transform: uppercase;
+  font-family: Monument Grotesk, sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 3.5em;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: block;
+  text-align: "left";
+}
+
+.button-custom-footer:hover {
+  color: var(--cream_v2); 
+}
+
+
+.content h1 {
+  font-size: 5vw; /* This makes the font size responsive to the viewport width */
+  font-weight: bold;
+  line-height: 1.1; /* Adjust line height to control the spacing between lines */
+  text-transform: uppercase;
+  white-space: normal; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides any overflow */
+  text-overflow: ellipsis; /* Adds an ellipsis to any text that overflows */
+}
+
+/* Content.css */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #0b0b0b;
+  color: whitesmoke;
+}
+
+.text-container {
+  width: 70%; /* Adjust width as needed */
+  padding-bottom: 30px;
+}
+
+.content-heading {
+  font-size: 2.5rem; /* Adjust font size as needed */
+  margin-bottom: 1rem; /* Adjust the gap between heading and content */
+  font-weight: bold;
+  padding-left: 1rem;
+
+}
+
+.content-text {
+  flex:1;
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-bottom: 2rem; /* Adjust spacing between text and buttons */
+  padding-left: 1rem;
+}
+
+.image-container {
+  flex:1;
+  width: 30%; /* Adjust width as needed */
+  display: flex;
+  justify-content: flex-end; /* Align image to the end (right) */
+}
+
+.image-container img {
+  max-width: 100%; /* Ensures image is not larger than its container */
+  max-height: 100%; /* Maintains aspect ratio */
+
 }
 
 
@@ -22,6 +177,13 @@
 
   .wwithus-text{
     font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 865px){
+  .h-time{
+    display: none;
   }
 }
 
@@ -58,15 +220,64 @@
   }
 }
 
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+    font-size: 1rem;
+  }
+
+  .text-container{
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+
+
+  .image-container {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .s-text-anim{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 766px){
+  .featured-video-container{
+    width: 100%;
+  }
+  .content-text{
+    font-size: 1.2rem;
+  }
+  .wwithus-text{
+    font-size: 1.2rem;
+  }
+}
+
+
+
 @media (max-width: 744px){
   .service{
     font-size: 2rem;
   }
 }
 
+@media (max-width: 706px){
+  .h-social{
+    display: none;
+  }
+}
+
 @media (max-width: 705px){
   .header-logo{
     margin: 0px;
+  }
+  .h-social{
+    display: none;
   }
   .header-link{
     padding: 0px 3px;
@@ -81,13 +292,6 @@
   }
   .c-form{
     width: 100%;
-  }
-}
-
-
-@media (max-width:770px){
-  .s-text{
-    font-size: 3rem;
   }
 }
 
@@ -115,7 +319,46 @@
     padding: 4px;
   }
 }
-@media (max-width: 414px){
+
+@media (max-width: 625px)
+{
+  .h-social{
+    display: none;
+   }
+  .header-social{
+    display: none;
+  }
+  .h-logo-link{
+    width: 100%;
+  }
+  .s-main-header-text{
+    font-size: 5rem;
+  }
+
+}
+
+@media (max-width: 611px){
+  .h-time{
+    display: none;
+  }
+}
+
+@media (max-width: 538px){
+  .s-text-anim{
+    text-align: left;
+    width: 100%;
+  }
+}
+@media (max-width: 456px){
+  .s-text-anim{
+    font-size: 18px;
+  }
+  .s-main-header-text{
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 413px){
   .f-main-text{
     font-size: 3rem;
   }
@@ -158,15 +401,28 @@
   }
 }
 
-@media (max-width: 611px){
-  .h-time{
-    display: none;
-  }
+
+.flex {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: space-between; /* Adjust as needed for your design */
 }
 
-@media (max-width: 766px){
-  .featured-video-container{
-    width: 100%;
-  }
+.navbar{
+  background-color: var(--black);
+  margin-top: 0;
+  padding-top: 0;
+  top: 0;
+
+}
+
+
+p{
+  font-family: Neue Montreal, sans-serif;
+}
+
+h1{
+  font-family: Monument Grotesk, sans-serif;
+  text-transform: uppercase;
 }
 

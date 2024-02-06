@@ -14,7 +14,11 @@ export const Header = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const formattedTime = currentTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  const formattedTime = currentTime.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });
 
   return (
     <>
@@ -22,43 +26,45 @@ export const Header = () => {
         <div className="h-logo-link flex">
           <div className="header-logo mx-4">
             <Link to="/">
-              <img src="/Image/AZ_Logo.png" alt="Logo" 
-                className="w-10 h-6"
+              <img src="/Image/logo_png.png" alt="Logo" 
+                className="w-12 h-12"
               />
             </Link>
           </div>
-        
+
           <div className="header-link">
             <NavLink
               to={"/work"}
-              className=" mx-1 border-solid border-2 border-white-100 rounded-xl px-2 text-transform: uppercase hover:bg-white hover:text-black"
+              className="button-custom"
             >Work</NavLink>
             <NavLink
               to={"/about"}
-              className=" mx-1 border-solid border-2 border-white-100 rounded-xl px-2 text-transform: uppercase hover:bg-white hover:text-black"
+              className="button-custom"
             >About</NavLink>
             <NavLink
               to={"/contact"}
-              className=" mx-1 border-solid border-2 border-white-100 rounded-xl px-2 text-transform: uppercase hover:bg-white hover:text-black"
+              className="button-custom"
             >Contact
             </NavLink>
           </div>
         </div>
 
         <div className="h-social flex">
+          <div className="header-social">
           <Link
             to={"https://www.instagram.com/alpha.zeal.media?igsh=eGN4YzR2eGl5YzRp"}
-            className="header-link mx-1 border-dotted border-2 border-gray-600 rounded-xl px-2 text-gray-600 hover:bg-white hover:text-black"
-          >IG</Link>
+            className="button-custom-dashed"
+          >Instagram</Link>
           <Link
             to={"https://www.linkedin.com/company/alpha-zeal-media-pvt-ltd/"}
-            className="header-link mx-1 border-dotted border-2 border-gray-600 rounded-xl px-2 text-gray-600 hover:bg-white hover:text-black"
-          >LI</Link>
+            className="button-custom-dashed"
+          >Linkedin</Link>
           <Link
             to={"#"}
-            className="header-link mx-1 border-dotted border-2 border-gray-600 rounded-xl px-2 text-gray-600 hover:bg-white hover:text-black"
-          >VIMEO</Link>
-          <div className="h-time mx-5">{formattedTime} - India @2024</div>
+            className="button-custom-dashed"
+          >PORTFOLIO</Link>
+          </div>
+          <div className="h-time mx-5 uppercase">{formattedTime} &nbsp;- &nbsp;NEW &nbsp;DELHI, &nbsp;IN &nbsp;(IST) &nbsp;©2024</div>
         </div>
       </div>
     </>

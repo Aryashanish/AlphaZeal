@@ -1,4 +1,4 @@
-@keyframes slideInLeft {
+/* @keyframes slideInLeft {
     from {
       transform: translateX(-100%);
     }
@@ -9,5 +9,5 @@
   
   .animate-slideInLeft {
     animation: slideInLeft 1.5s ease-in-out forwards;
-  }
+  } */
   
