@@ -1,2 +1,3 @@
 # AlphaZeal
-Official Website of alphaZeal
+Official Website of alphaZealmedia 
+[Deployed] - (https://alpha-zeal.vercel.app/)
