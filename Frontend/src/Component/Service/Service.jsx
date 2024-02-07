@@ -89,11 +89,9 @@ const RevealText = ({ index, text, startAnimation }) => {
       <hr className="border-dashed border-1 border-gray-400 my-4"></hr> 
     <div
       ref={ref}
-      className={`s-text ${index % 2 === 0 ? 's-text-anim text-left' : 's-text-anim w-1/2 ml-auto flex justify-start'} text-4xl font-bold my-4`}
+      className={`s-text h-8 ${index % 2 === 0 ? 's-text-anim text-left' : 's-text-anim w-1/2 ml-auto flex justify-start'} text-4xl font-bold my-4`}
     >
-      {/* <hr className="border-dashed border-1 border-gray-400 my-4"></hr> */}
       {placeholder}
-      {/* <hr className="border-dashed border-1 border-gray-400 my-4"></hr>  */}
     </div>
     </div>
   );

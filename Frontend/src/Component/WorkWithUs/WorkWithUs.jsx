@@ -38,10 +38,10 @@ export const WorkWithUs = () => {
               <br />
             </p>
             <p className="my-3">
-            Whether you're starting or soaring, ALPHA ZEAL creates standout content that resonates and makes an impact that leaves a lasting impression on your audience.
+            Whether you are starting or soaring, ALPHA ZEAL creates standout content that resonates and makes an impact that leaves a lasting impression on your audience.
             </p>
           </div>
-          <div className="my-3">
+          <div className="wwlinkbtn my-3">
             <Link
               to={"/about"}
               className="button-custom-arrow"

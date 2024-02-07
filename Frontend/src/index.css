@@ -401,6 +401,17 @@
   }
 }
 
+@media (max-width: 391px){
+  .wwlinkbtn{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  .button-custom-arrow{
+    margin: 1px;
+  }
+}
+
 
 .flex {
   display: flex;
